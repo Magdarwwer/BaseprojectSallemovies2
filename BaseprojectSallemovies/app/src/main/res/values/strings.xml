@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">BaseprojectSallemovies</string>
+    <string name="titleMain">Sallemovies</string>
+    <string name="description">Description</string>
+    <string name="length">Duration</string>
+    <string name="language">Language</string>
+    <string name="year">Year</string>
+    <string name="cast">Cast</string>
+</resources>
