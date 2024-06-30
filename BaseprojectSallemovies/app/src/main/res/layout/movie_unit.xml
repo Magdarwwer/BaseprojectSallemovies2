@@ -1,4 +1,4 @@
-<!-- movie_item.xml -->
+<!-- movie_unit.xml -->
 <TextView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/movie_title"

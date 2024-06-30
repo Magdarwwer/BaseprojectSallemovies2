@@ -1,8 +1,6 @@
-//movie class with all properties
-//title
-//time
-//director
-// Movie.java
+package com.androidpprog2.baseprojectsallemovies;
+import android.media.Image;
+
 import java.util.List;
 
 public class Movie {

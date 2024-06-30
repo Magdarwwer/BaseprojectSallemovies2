@@ -1,9 +1,25 @@
+package com.androidpprog2.baseprojectsallemovies;
+
+import android.content.Context;
+import android.graphics.Movie;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.List;
+
 // MovieAdapter.java
-public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHolder> {
+public class RecycleViewerAdapter extends RecyclerView.Adapter<RecycleViewerAdapter.MovieViewHolder> {
     private List<Movie> movies;
     private Context context;
 
-    public MovieAdapter(Context context, List<Movie> movies) {
+    public RecycleViewerAdapter(Context context, List<Movie> movies) {
         this.context = context;
         this.movies = movies;
     }
@@ -11,7 +27,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
     @NonNull
     @Override
     public MovieViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.movie_item, parent, false);
+        View view = LayoutInflater.from(context).inflate(R.layout.movie_unit, parent, false);
         return new MovieViewHolder(view);
     }
 
@@ -22,9 +38,9 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
         holder.itemView.setOnClickListener(v -> {
             // Open fragment with additional details
             FragmentManager fragmentManager = ((AppCompatActivity) context).getSupportFragmentManager();
-            MovieFragment fragment = MovieFragment.newInstance(movie);
+            MovieDetailFragment fragment = MovieDetailFragment.newInstance(movie);
             fragmentManager.beginTransaction()
-                    .replace(R.id.fragment_container, fragment)
+                    .replace(R.id.movie_fragment, fragment)
                     .addToBackStack(null)
                     .commit();
         });
@@ -44,3 +60,4 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
         }
     }
 }
+
