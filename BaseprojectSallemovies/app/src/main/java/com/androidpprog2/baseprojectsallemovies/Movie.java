@@ -1,9 +1,9 @@
 package com.androidpprog2.baseprojectsallemovies;
-import android.media.Image;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class Movie {
+public class Movie implements Serializable {
 
     private String title;
     private int year;
@@ -13,10 +13,10 @@ public class Movie {
     private int score;
     private String language;
     private String extract;
-    private Image image;
+    private String imageUrl;
 
     // Constructor
-    public Movie(String title, int year, List<String> cast, List<String> genres, int length, int score, String language, String extract, Image image) {
+    public Movie(String title, int year, List<String> cast, List<String> genres, int length, int score, String language, String extract, String imageUrl) {
         this.title = title;
         this.year = year;
         this.cast = cast;
@@ -25,7 +25,7 @@ public class Movie {
         this.score = score;
         this.language = language;
         this.extract = extract;
-        this.image = image;
+        this.imageUrl = imageUrl;
     }
 
     // Getters
@@ -61,8 +61,8 @@ public class Movie {
         return extract;
     }
 
-    public Image getImage() {
-        return image;
+    public String getImageUrl() {
+        return imageUrl;
     }
 
     // Setters
@@ -98,8 +98,7 @@ public class Movie {
         this.extract = extract;
     }
 
-    public void setImage(Image image) {
-        this.image = image;
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 }
-

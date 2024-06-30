@@ -15,7 +15,6 @@ plugins {
 }
 
 allprojects {
-
 }
 
 tasks.register<Delete>("clean") {

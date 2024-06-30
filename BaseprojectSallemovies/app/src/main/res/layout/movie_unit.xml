@@ -1,9 +1,118 @@
 <!-- movie_unit.xml -->
-<TextView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/movie_title"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:textSize="18sp"
-    android:padding="16dp"
-    android:textColor="@android:color/black"/>
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Movie Image -->
+    <ImageView
+        android:id="@+id/movie_image"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop" />
+
+    <!-- Movie Name -->
+    <TextView
+        android:id="@+id/movie_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:padding="16dp"
+        android:text="Movie Title"
+        android:textColor="@android:color/black" />
+
+    <!-- Rating -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/star_yellow"
+            android:layout_gravity="center_vertical"
+            app:tint="@android:color/black" />
+
+        <TextView
+            android:id="@+id/movie_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="8.5"
+            android:layout_marginStart="8dp"
+            android:textColor="@android:color/black"/>
+
+    </LinearLayout>
+
+    <!-- Genres -->
+    <TextView
+        android:id="@+id/movie_genres"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:text="Genres: Action, Drama"
+        android:textColor="@android:color/black" />
+
+    <!-- Duration -->
+    <TextView
+        android:id="@+id/movie_duration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:text="Duration: 2h 30min"
+        android:textColor="@android:color/black" />
+
+    <!-- Language -->
+    <TextView
+        android:id="@+id/movie_language"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:text="Language: English"
+        android:textColor="@android:color/black" />
+
+    <!-- Publication -->
+    <TextView
+        android:id="@+id/movie_publication"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:text="Publication: 2023"
+        android:textColor="@android:color/black" />
+
+    <!-- Description -->
+    <TextView
+        android:id="@+id/movie_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:padding="16dp"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet magna ac libero lacinia lacinia."
+        android:textColor="@android:color/black" />
+
+    <!-- Actors -->
+    <TextView
+        android:id="@+id/movie_actors"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:padding="16dp"
+        android:text="Actors: Actor A, Actor B, Actor C"
+        android:textColor="@android:color/black" />
+
+</LinearLayout>
