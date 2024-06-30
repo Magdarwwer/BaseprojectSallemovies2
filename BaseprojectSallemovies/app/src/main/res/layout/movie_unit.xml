@@ -23,6 +23,7 @@
         android:text="Movie Title"
         android:textColor="@android:color/black" />
 
+    <!---->
     <!-- Rating -->
     <LinearLayout
         android:layout_width="match_parent"
